@@ -23,3 +23,4 @@ The association of each problem with the file is specified below:
 - problem17.Problem17: [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
 - problem18.Problem18: [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
 - problem19.Problem19: [Rotate Image](https://leetcode.com/problems/rotate-image/)
+- problem20.Problem20: [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
