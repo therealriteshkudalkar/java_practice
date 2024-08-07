@@ -25,3 +25,4 @@ The association of each problem with the file is specified below:
 - problem19.Problem19: [Rotate Image](https://leetcode.com/problems/rotate-image/)
 - problem20.Problem20: [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 - problem21.Problem21: [Game of Life](https://leetcode.com/problems/game-of-life/)
+- problem22.Problem22: [Pairs of Songs With Total Durations Divisible by 60](https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/)
