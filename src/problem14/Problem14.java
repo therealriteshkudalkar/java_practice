@@ -7,7 +7,7 @@ import java.util.List;
 public class Problem14 {
     static class RandomizedSet {
         private final HashMap<Integer, Integer> map;
-        private final List<Integer> list;
+        private final ArrayList<Integer> list;
 
         public RandomizedSet() {
             map = new HashMap<>();
@@ -33,11 +33,11 @@ public class Problem14 {
             // Swap the element at the index and the last element
             // Update the index in map for the element with which it was swapped
             int indexOfElementToBeRemoved = map.get(val);
-            int itemAtLastIndex = list.getLast();
+            int itemAtLastIndex = list.get(list.size() - 1);
             map.put(itemAtLastIndex, indexOfElementToBeRemoved);
             map.remove(val);
             list.set(indexOfElementToBeRemoved, itemAtLastIndex);
-            list.removeLast();
+            list.remove(list.size() - 1);
             return true;
         }
 
