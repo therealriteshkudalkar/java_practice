@@ -70,33 +70,23 @@ public class Problem24 {
     }
 
     private int coinChangeWithIndexTabulated(int[] coins, int amount) {
-        // Create a 2D array
-        int[][] table = new int[coins.length][amount + 1];
-        // In Java, array are initialized to zero, so table[i][0] is already 0
-        for (int i = 0; i < coins.length; i++) {
-            // Check how to fill the table
-            for (int j = 1; j <= amount; j++) {
-                // fill the table according to the rules
-                if (i == 0) {
-                    // In this case we can only choose the amount
-                    if (j - coins[i] >= 0) {
-                        table[i][j] = 1 + table[i][j - coins[i]];
-                    } else {
-                        table[i][j] = -1;
+        if (amount == 0) {
+            return 0;
+        }
+        int[] coinsRequired = new int[amount + 1];
+        for (int i = 1; i <= amount; i++) {
+            coinsRequired[i] = Integer.MAX_VALUE;
+            for (int coin : coins) {
+                if (coin <= i) {
+                    // Take care of saturated addition
+                    if (coinsRequired[i - coin] == Integer.MAX_VALUE) {
+                        continue;
                     }
-                } else {
-                    if (j - coins[i] >= 0) {
-                        // It's possible to choose from a previous value
-                        // Now check if that is the minimum value that we can form
-                        table[i][j] = Math.min(1 + table[i][j - coins[i]], table[i - 1][j]);
-                    } else {
-                        // It is not possible to choose from a previous value
-                        table[i][j] = table[i - 1][j];
-                    }
+                    coinsRequired[i] = Math.min(coinsRequired[i], 1 + coinsRequired[i - coin]);
                 }
             }
         }
-        return table[coins.length - 1][amount];
+        return coinsRequired[amount] == Integer.MAX_VALUE ? -1 : coinsRequired[amount];
     }
 
     public int coinChange(int[] coins, int amount) {
