@@ -1,7 +1,23 @@
 package problem40;
 
 public class Problem40 {
+    public int maxSubArrayBruteForce(int[] nums) {
+        if (nums.length == 0) {
+            return 0;
+        }
+        int maxSum = Integer.MIN_VALUE;
+        for (int i = 0; i < nums.length; i++) {
+            int currentSum = 0;
+            for (int j = i; j < nums.length; j++) {
+                currentSum += nums[j];
+                maxSum = Math.max(maxSum, currentSum);
+            }
+        }
+        return maxSum;
+    }
+
     public int maxSubArray(int[] nums) {
+        // TODO: Rectify the error with the min and max calculation
         if (nums.length == 0) {
             return 0;
         }
@@ -48,5 +64,19 @@ public class Problem40 {
             minPrefixSum = Math.min(minPrefixSum, prefixSum[i]);
         }
         return maxSubArraySum;
+    }
+
+    public int maxSubArrayKadaneSimplified(int[] nums) {
+        if (nums.length == 0) {
+            return 0;
+        }
+
+        int localMaximum = 0;
+        int globalMaximum = Integer.MIN_VALUE;
+        for (int num: nums) {
+            localMaximum = Math.max(num, num + localMaximum);
+            globalMaximum = Math.max(globalMaximum, localMaximum);
+        }
+        return globalMaximum;
     }
 }
