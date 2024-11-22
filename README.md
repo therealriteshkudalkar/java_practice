@@ -47,3 +47,5 @@ The association of each problem with the file is specified below:
 - problem41.Problem41: [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 - problem42.Problem42: [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) (Implementation Left)
 - problem43.Problem43: [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+- problem44.Problem44: [House Robber](https://leetcode.com/problems/house-robber/) (Brute Force Approach Left)
+- 
