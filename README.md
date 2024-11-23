@@ -48,4 +48,4 @@ The association of each problem with the file is specified below:
 - problem42.Problem42: [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) (Implementation Left)
 - problem43.Problem43: [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
 - problem44.Problem44: [House Robber](https://leetcode.com/problems/house-robber/) (Brute Force Approach Left)
-- 
+- problem45.Problem45: [Word Break](https://leetcode.com/problems/word-break/)
