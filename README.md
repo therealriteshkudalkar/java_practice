@@ -101,3 +101,5 @@ The association of each problem with the file is specified below:
 - problem95.Problem95: [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
 - problem96.Problem96: [Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/)
 - problem97.Problem97: [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
+- problem98.Problem98: [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)
+- problem99.Problem99: [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
