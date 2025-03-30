@@ -103,3 +103,5 @@ The association of each problem with the file is specified below:
 - problem97.Problem97: [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
 - problem98.Problem98: [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)
 - problem99.Problem99: [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
+- problem100.Problem100: [Path With Maximum Minimum Value](https://leetcode.com/problems/path-with-maximum-minimum-value/)
+- problem101.Problem101: [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)
