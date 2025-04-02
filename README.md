@@ -105,3 +105,7 @@ The association of each problem with the file is specified below:
 - problem99.Problem99: [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
 - problem100.Problem100: [Path With Maximum Minimum Value](https://leetcode.com/problems/path-with-maximum-minimum-value/)
 - problem101.Problem101: [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)
+- problem102.Problem102: [Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/)
+- problem103.Problem103: [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+- problem104.Problem104: [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
+- problem105.Problem105: [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
