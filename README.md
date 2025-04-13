@@ -109,3 +109,4 @@ The association of each problem with the file is specified below:
 - problem103.Problem103: [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 - problem104.Problem104: [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
 - problem105.Problem105: [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
+- problem106.Problem106: [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
