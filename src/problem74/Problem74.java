@@ -1,8 +1,57 @@
 package problem74;
 
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class Problem74 {
+    public int[] getOrderOptimized(int[][] tasks) {
+        // Sort tasks according to enqueue time, processing time, orders available and sort them accordingly
+        record Triple(int enqueueTime, int processingTime, int batchId) {}
+        int[][] orderedTasks = new int[tasks.length][3];
+        for (int i = 0; i < tasks.length; i++) {
+            int[] task = tasks[i];
+            orderedTasks[i][0] = task[0];
+            orderedTasks[i][1] = task[1];
+            orderedTasks[i][2] = i;
+        }
+        Arrays.sort(orderedTasks, (o1, o2) -> {
+            if (o1[0] == o2[0]) {
+                if (o1[1] == o2[1]) {
+                    return o1[2] - o2[2];
+                }
+                return o1[1] - o2[1];
+            }
+            return o1[0] - o2[0];
+        });
+
+        PriorityQueue<Triple> readyQueue = new PriorityQueue<>((o1, o2) -> {
+            if (o1.processingTime == o2.processingTime) {
+                return o1.batchId - o2.batchId;
+            }
+            return o1.processingTime - o2.processingTime;
+        });
+
+        int timestamp = 0;
+        int orderedTaskIndex = 0;
+        List<Integer> taskIndexList = new ArrayList<>();
+
+        while(orderedTaskIndex < tasks.length || !readyQueue.isEmpty()) {
+
+            if (readyQueue.isEmpty() && timestamp < orderedTasks[orderedTaskIndex][0]) {
+                timestamp = orderedTasks[orderedTaskIndex][0];
+            }
+
+            while(orderedTaskIndex < tasks.length && orderedTasks[orderedTaskIndex][0] <= timestamp) {
+                readyQueue.add(new Triple(orderedTasks[orderedTaskIndex][0], orderedTasks[orderedTaskIndex][1], orderedTasks[orderedTaskIndex][2]));
+                orderedTaskIndex++;
+            }
+
+            Triple currentlyProcessingTask = readyQueue.poll();
+            timestamp += currentlyProcessingTask.processingTime;
+            taskIndexList.add(currentlyProcessingTask.batchId);
+        }
+        return taskIndexList.stream().mapToInt(i -> i).toArray();
+    }
+
     public int[] getOrder(int[][] tasks) {
         // Create a priority queue that contains all the tasks assigned according to the enqueue time
         // While the queue is not empty enqueue a task and process it
@@ -19,7 +68,7 @@ public class Problem74 {
         // 1. processingTime
         // 2. batchId
         record Triple(int enqueueTime, int processingTime, int batchId) {}
-        PriorityQueue<Triple> processingQueue = new PriorityQueue<>((o1, o2) -> {
+        PriorityQueue<Triple> sortedTasks = new PriorityQueue<>((o1, o2) -> {
             if (o1.enqueueTime == o2.enqueueTime) {
                 if (o1.processingTime == o2.processingTime ) {
                     return Integer.compare(o1.batchId, o2.batchId);
@@ -37,14 +86,14 @@ public class Problem74 {
 
         int i = 0;
         for(int[] task: tasks) {
-            processingQueue.add(new Triple(task[0], task[1], i++));
+            sortedTasks.add(new Triple(task[0], task[1], i++));
         }
         int[] processedTasks = new int[tasks.length];
 
         int timeStamp = 0;
         int index = 0;
-        while(!processingQueue.isEmpty()) {
-            Triple newlyAddedTask = processingQueue.poll();
+        while(!sortedTasks.isEmpty()) {
+            Triple newlyAddedTask = sortedTasks.poll();
             // Add this task to the available queue
             availableQueue.add(newlyAddedTask);
 
@@ -59,8 +108,8 @@ public class Problem74 {
                 timeStamp = Math.max(timeStamp, taskToBeProcessed.enqueueTime) + taskToBeProcessed.processingTime;
 
                 // From the processing queue add all the task to available task queue if their enqueueTime is greater than
-                while(!processingQueue.isEmpty() && timeStamp >= processingQueue.peek().enqueueTime) {
-                    availableQueue.add(processingQueue.poll());
+                while(!sortedTasks.isEmpty() && timeStamp >= sortedTasks.peek().enqueueTime) {
+                    availableQueue.add(sortedTasks.poll());
                 }
             }
         }

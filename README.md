@@ -110,3 +110,5 @@ The association of each problem with the file is specified below:
 - problem104.Problem104: [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
 - problem105.Problem105: [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
 - problem106.Problem106: [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+- problem107.Problem107: [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)
+- problem108.Problem108: [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
