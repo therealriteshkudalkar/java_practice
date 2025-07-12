@@ -112,3 +112,6 @@ The association of each problem with the file is specified below:
 - problem106.Problem106: [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
 - problem107.Problem107: [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)
 - problem108.Problem108: [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+- problem109.Problem109: [Maximum Subsequence Score](https://leetcode.com/problems/maximum-subsequence-score/)
+- problem110.Problem110: [Basic Calculator](https://leetcode.com/problems/basic-calculator/) (Implementation Left)
+- problem111.Problem111: [Sliding Window Median](https://leetcode.com/problems/sliding-window-median/)
