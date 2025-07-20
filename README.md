@@ -119,3 +119,4 @@ The association of each problem with the file is specified below:
 - problem113.Problem113: [Course Schedule](https://leetcode.com/problems/course-schedule/)
 - problem114.Problem114: [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
 - problem115.Problem115: [Clone Graph](https://leetcode.com/problems/clone-graph/)
+- problem116.Problem116: [Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/) (Optimized Approach Left)
