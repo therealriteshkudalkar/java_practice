@@ -18,21 +18,21 @@ public class Problem115 {
             Node currentNode = queue.poll();
             map.putIfAbsent(currentNode.val, new Node(currentNode.val));
 
-            // Visit the neighbours of the original node
-            for (Node neighbour: currentNode.neighbors) {
-                if (!visited.contains(neighbour.val)) {
-                    visited.add(neighbour.val);
-                    queue.add(neighbour);
+            // Visit the neighbors of the original node
+            for (Node neighbor: currentNode.neighbors) {
+                if (!visited.contains(neighbor.val)) {
+                    visited.add(neighbor.val);
+                    queue.add(neighbor);
                 }
 
                 Node currentNodeCopy = map.get(currentNode.val);
-                Node neighbourCopy = map.getOrDefault(neighbour.val, new Node(neighbour.val));
+                Node neighborCopy = map.getOrDefault(neighbor.val, new Node(neighbor.val));
 
-                // Add the corresponding neighbour to adj list
-                currentNodeCopy.neighbors.add(neighbourCopy);
+                // Add the corresponding neighbor to the adjacency list
+                currentNodeCopy.neighbors.add(neighborCopy);
 
                 // Always put the neighbourCopy in the map
-                map.putIfAbsent(neighbour.val, neighbourCopy);
+                map.putIfAbsent(neighbor.val, neighborCopy);
             }
         }
 
