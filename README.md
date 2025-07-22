@@ -120,3 +120,5 @@ The association of each problem with the file is specified below:
 - problem114.Problem114: [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
 - problem115.Problem115: [Clone Graph](https://leetcode.com/problems/clone-graph/)
 - problem116.Problem116: [Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/) (Optimized Approach Left)
+- problem117.Problem117: [Letter Case Permutation](https://leetcode.com/problems/letter-case-permutation)
+- problem118.Problem118: [Check If a String Contains All Binary Codes of Size K](https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k/)
